@@ -10,3 +10,6 @@
 [submodule "bundle/fuzzyfinder_textmate"]
 	path = bundle/fuzzyfinder_textmate
 	url = git://github.com/sethbc/fuzzyfinder_textmate.git
+[submodule "bundle/vividchalk"]
+	path = bundle/vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
