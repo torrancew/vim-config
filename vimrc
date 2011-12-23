@@ -14,3 +14,9 @@ let mapleader=','
 
 " NERDTree Bindings
 nmap <leader>B :NERDTreeToggle<CR>
+
+" FuzzyFinder Bindings
+nmap <leader>t :FuzzyFinderTextMate<CR>
+nmap <leader>b :FuzzyFinderBuffer<CR>
+nmap <leader>f :FuzzyFinderFile<CR>
+
