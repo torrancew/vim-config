@@ -49,3 +49,18 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/less"]
+	path = bundle/less
+	url = git://github.com/groenewege/vim-less.git
+[submodule "bundle/css3"]
+	path = bundle/css3
+	url = git://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/coffeescript"]
+	path = bundle/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/pasta"]
+	path = bundle/pasta
+	url = git://github.com/sickill/vim-pasta.git
