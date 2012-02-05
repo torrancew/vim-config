@@ -31,8 +31,14 @@ nmap <leader>P "+gP
 " NERDTree Bindings
 nmap <leader>B :NERDTreeToggle<CR>
 
+" ctags Bindings
+nmap <leader>r :!ctags --exclude='*/tmp/*' --exclude='*/log/*' -R ./*<CR><CR>
+
 " FuzzyFinder Bindings
+nmap <leader>R :FuzzyFinderTextMateRefreshFiles<CR>
 nmap <leader>t :FuzzyFinderTextMate<CR>
+nmap <leader>T :FuzzyFinderTag<CR>
 nmap <leader>b :FuzzyFinderBuffer<CR>
 nmap <leader>f :FuzzyFinderFile<CR>
+nmap <leader>F :FuzzyFinderTaggedFile<CR>
 
