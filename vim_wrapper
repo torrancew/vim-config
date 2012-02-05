@@ -1,0 +1,5 @@
+#! /bin/sh
+
+/usr/bin/vim "$@"
+
+echo -n "\033[0m"
