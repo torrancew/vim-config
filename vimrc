@@ -18,6 +18,12 @@ filetype plugin indent on
 set ts=2 sts=2 sw=2 noai nonu et si
 
 """""""""""""""""""
+""" Status Line """
+"""""""""""""""""""
+set laststatus=2
+set statusline=%t\ %{fugitive#statusline()}\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y%=%c,%l/%L\ %P
+
+"""""""""""""""""""
 """ KeyBindings """
 """""""""""""""""""
 let mapleader=','
