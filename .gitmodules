@@ -67,3 +67,6 @@
 [submodule "bundle/perl"]
 	path = bundle/perl
 	url = git://github.com/rkitover/perl-vim-mxd.git
+[submodule "bundle/perlomni"]
+	path = bundle/perlomni
+	url = https://github.com/c9s/perlomni.vim.git
