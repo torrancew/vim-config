@@ -64,3 +64,6 @@
 [submodule "bundle/pasta"]
 	path = bundle/pasta
 	url = git://github.com/sickill/vim-pasta.git
+[submodule "bundle/perl"]
+	path = bundle/perl
+	url = git://github.com/rkitover/perl-vim-mxd.git
