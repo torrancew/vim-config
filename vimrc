@@ -80,6 +80,10 @@ endfunction
 """""""""""""""""""
 let mapleader=','
 
+" Search with Ack
+nmap <leader>a :Ack<CR>
+vmap <leader>a :Ack<CR>
+
 " Toggle Non-Printable Characters
 nmap <leader>l :set list!<CR>
 
