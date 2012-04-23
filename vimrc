@@ -114,3 +114,4 @@ nmap <leader>b :FuzzyFinderBuffer<CR>
 nmap <leader>f :FuzzyFinderFile<CR>
 nmap <leader>F :FuzzyFinderTaggedFile<CR>
 
+source ~/.vimrc.local
