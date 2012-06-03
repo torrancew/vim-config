@@ -73,3 +73,6 @@
 [submodule "bundle/spf13.colors"]
 	path = bundle/spf13.colors
 	url = git://github.com/spf13/vim-colors.git
+[submodule "bundle/openscad"]
+	path = bundle/openscad
+	url = git://github.com/torrancew/vim-openscad.git
