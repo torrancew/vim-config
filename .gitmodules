@@ -76,3 +76,6 @@
 [submodule "bundle/openscad"]
 	path = bundle/openscad
 	url = git://github.com/torrancew/vim-openscad.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git

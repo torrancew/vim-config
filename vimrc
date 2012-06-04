@@ -21,7 +21,15 @@ set ts=2 sts=2 sw=2 noai nu et si
 """ Status Line """
 """""""""""""""""""
 set laststatus=2
-set statusline=%t\ %{fugitive#statusline()}\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ %h%m%r%y%=%c,%l/%L\ %P
+set statusline=%t\ 
+set statusline+=%#warningmsg#\ 
+set statusline+=%{SyntasticStatuslineFlag()}\ 
+set statusline+=%*\ 
+set statusline+=%{fugitive#statusline()}\ 
+set statusline+=%{rvm#statusline()}\ 
+set statusline+=[%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ 
+set statusline+=%h%m%r%y%=%c,%l/%L\ 
+set statusline+=%P\ 
 
 """"""""""""""""""""""
 """ Syntax Folding """
@@ -113,5 +121,9 @@ nmap <leader>T :FuzzyFinderTag<CR>
 nmap <leader>b :FuzzyFinderBuffer<CR>
 nmap <leader>f :FuzzyFinderFile<CR>
 nmap <leader>F :FuzzyFinderTaggedFile<CR>
+
+" Syntastic Bindings
+nmap <leader>s :SyntasticCheck<CR>
+nmap <leader>S :SyntasticToggleMode<CR>
 
 source ~/.vimrc.local
