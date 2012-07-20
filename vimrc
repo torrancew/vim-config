@@ -88,6 +88,9 @@ endfunction
 """""""""""""""""""
 let mapleader=','
 
+" Modify and Reload Keybindings
+nmap <leader>k :!gvim -f ~/.vimrc<CR>:source ~/.vimrc<CR>
+
 " Search with Ack
 nmap <leader>a :Ack<CR>
 vmap <leader>a :Ack<CR>
@@ -125,5 +128,20 @@ nmap <leader>F :FuzzyFinderTaggedFile<CR>
 " Syntastic Bindings
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>S :SyntasticToggleMode<CR>
+
+" ConqueTerm Bindings
+nmap <leader>Te  :ConqueTermSplit 
+nmap <leader>Ts  :ConqueTermSplit bash<CR>
+nmap <leader>Tr  :ConqueTermSplit pry<CR>
+nmap <leader>Tpl :ConqueTermSplit psh<CR>
+nmap <leader>Tpy :ConqueTermSplit ipython<CR>
+
+" RubyConque Bindings
+nmap <leader>rr  :ConqueTermSplit rake<CR>
+nmap <leader>rs  :ConqueTermSplit rspec --color<CR>
+nmap <leader>rc  :ConqueTermSplit cucumber --color<CR>
+nmap <leader>rrf :call RunRubyCurrentFileConque()<CR>
+nmap <leader>rsf :call RunRspecCurrentFileConque()<CR>
+nmap <leader>rcf :call RunCucumberCurrentFileConque()<CR>
 
 source ~/.vimrc.local

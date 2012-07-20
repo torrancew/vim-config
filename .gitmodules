@@ -79,3 +79,9 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/ruby-conque"]
+	path = bundle/ruby-conque
+	url = git://github.com/skwp/vim-ruby-conque.git
+[submodule "bundle/conque-term"]
+	path = bundle/conque-term
+	url = git://github.com/rosenfeld/conque-term.git
