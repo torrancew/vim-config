@@ -69,7 +69,7 @@
 	url = git://github.com/rkitover/perl-vim-mxd.git
 [submodule "bundle/perlomni"]
 	path = bundle/perlomni
-	url = https://github.com/c9s/perlomni.vim.git
+	url = git://github.com/c9s/perlomni.vim.git
 [submodule "bundle/spf13.colors"]
 	path = bundle/spf13.colors
 	url = git://github.com/spf13/vim-colors.git
