@@ -6,7 +6,7 @@ call pathogen#infect()
 """"""""""""""""
 """ GUI Font """
 """"""""""""""""
-set guifont=Ubuntu\ Mono\ 10
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 
 """"""""""""""""""""""""
 """ General Settings """
@@ -21,6 +21,8 @@ set ts=2 sts=2 sw=2 noai nu et si
 """ Status Line """
 """""""""""""""""""
 set laststatus=2
+let g:Powerline_symbols='fancy'
+" Deprecated by powerline; active if powerline is removed
 set statusline=%t\ 
 set statusline+=%#warningmsg#\ 
 set statusline+=%{SyntasticStatuslineFlag()}\ 
