@@ -1,7 +1,11 @@
-"""""""""""""""""""""
-""" Load Pathogen """
-"""""""""""""""""""""
-call pathogen#infect()
+set nocompatible
+filetype off
+
+"""""""""""""""""""
+""" Load Vundle """
+"""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 """"""""""""""""
 """ GUI Font """
@@ -11,11 +15,42 @@ set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 """"""""""""""""""""""""
 """ General Settings """
 """"""""""""""""""""""""
-colorscheme vividchalk
+colorscheme slate
 syntax on
 
 filetype plugin indent on
 set ts=2 sts=2 sw=2 noai nu et si
+
+""""""""""""""""""""""
+""" Vundle Bundles """
+""""""""""""""""""""""
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/L9'
+Bundle 'sethbc/fuzzyfinder_textmate'
+Bundle 'scrooloose/nerdtree'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-haml'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'mileszs/ack.vim'
+Bundle 'sickill/vim-pasta'
+Bundle 'rkitover/perl-vim-mxd'
+Bundle 'c9s/perlomni.vim'
+Bundle 'spf13/vim-colors'
+Bundle 'torrancew/vim-openscad'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-powerline'
 
 """""""""""""""""""
 """ Status Line """
@@ -175,18 +210,19 @@ nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>S :SyntasticToggleMode<CR>
 
 " ConqueTerm Bindings
-nmap <leader>Te  :ConqueTermSplit 
-nmap <leader>Ts  :ConqueTermSplit bash<CR>
-nmap <leader>Tr  :ConqueTermSplit pry<CR>
-nmap <leader>Tpl :ConqueTermSplit psh<CR>
-nmap <leader>Tpy :ConqueTermSplit ipython<CR>
+"nmap <leader>Te  :ConqueTermSplit 
+"nmap <leader>Ts  :ConqueTermSplit bash<CR>
+"nmap <leader>Tr  :ConqueTermSplit pry<CR>
+"nmap <leader>Tpl :ConqueTermSplit psh<CR>
+"nmap <leader>Tpy :ConqueTermSplit ipython<CR>
 
 " RubyConque Bindings
-nmap <leader>rr  :ConqueTermSplit rake<CR>
-nmap <leader>rs  :ConqueTermSplit rspec --color<CR>
-nmap <leader>rc  :ConqueTermSplit cucumber --color<CR>
-nmap <leader>rrf :call RunRubyCurrentFileConque()<CR>
-nmap <leader>rsf :call RunRspecCurrentFileConque()<CR>
-nmap <leader>rcf :call RunCucumberCurrentFileConque()<CR>
+"nmap <leader>rr  :ConqueTermSplit rake<CR>
+"nmap <leader>rs  :ConqueTermSplit rspec --color<CR>
+"nmap <leader>rc  :ConqueTermSplit cucumber --color<CR>
+"nmap <leader>rrf :call RunRubyCurrentFileConque()<CR>
+"nmap <leader>rsf :call RunRspecCurrentFileConque()<CR>
+"nmap <leader>rcf :call RunCucumberCurrentFileConque()<CR>
 
 source ~/.vimrc.local
+
