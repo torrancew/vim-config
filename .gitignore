@@ -1,4 +1,4 @@
-.netrwhist
-
-bundle/*
+.vimrc.local
+.vim/bundle/*
+.vim/.netrwhist
 
