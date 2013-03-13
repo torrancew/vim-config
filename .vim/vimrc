@@ -7,27 +7,12 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-""""""""""""""""
-""" GUI Font """
-""""""""""""""""
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
-
-""""""""""""""""""""""""
-""" General Settings """
-""""""""""""""""""""""""
-colorscheme slate
-syntax on
-
-filetype plugin indent on
-set ts=2 sts=2 sw=2 noai nu et si
-
 """"""""""""""""""""""
 """ Vundle Bundles """
 """"""""""""""""""""""
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/L9'
-Bundle 'sethbc/fuzzyfinder_textmate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'plasticboy/vim-markdown'
@@ -51,6 +36,22 @@ Bundle 'spf13/vim-colors'
 Bundle 'torrancew/vim-openscad'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/ctrlp.vim'
+"Bundle 'sethbc/fuzzyfinder_textmate'
+
+""""""""""""""""
+""" GUI Font """
+""""""""""""""""
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+
+""""""""""""""""""""""""
+""" General Settings """
+""""""""""""""""""""""""
+colorscheme slate
+syntax on
+
+filetype plugin indent on
+set ts=2 sts=2 sw=2 noai nu et si
 
 """""""""""""""""""
 """ Status Line """
@@ -173,7 +174,9 @@ nmap <leader>h :Hexmode<CR>
 
 " Search with Ack
 nmap <leader>a :Ack<CR>
+nmap <leader>A :Ack 
 vmap <leader>a :Ack<CR>
+vmap <leader>A :Ack 
 
 " Toggle Non-Printable Characters
 nmap <leader>l :set list!<CR>
@@ -198,12 +201,12 @@ nmap <leader>B :NERDTreeToggle<CR>
 nmap <leader>r :!ctags --exclude='*/tmp/*' --exclude='*/log/*' -R ./*<CR><CR>
 
 " FuzzyFinder Bindings
-nmap <leader>R :FuzzyFinderTextMateRefreshFiles<CR>
-nmap <leader>t :FuzzyFinderTextMate<CR>
-nmap <leader>T :FuzzyFinderTag<CR>
-nmap <leader>b :FuzzyFinderBuffer<CR>
-nmap <leader>f :FuzzyFinderFile<CR>
-nmap <leader>F :FuzzyFinderTaggedFile<CR>
+"nmap <leader>R :FuzzyFinderTextMateRefreshFiles<CR>
+"nmap <leader>t :FuzzyFinderTextMate<CR>
+"nmap <leader>T :FuzzyFinderTag<CR>
+"nmap <leader>b :FuzzyFinderBuffer<CR>
+"nmap <leader>f :FuzzyFinderFile<CR>
+"nmap <leader>F :FuzzyFinderTaggedFile<CR>
 
 " Syntastic Bindings
 nmap <leader>s :SyntasticCheck<CR>
