@@ -37,7 +37,8 @@ Bundle 'torrancew/vim-openscad'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'sethbc/fuzzyfinder_textmate'
+Bundle 'godlygeek/tabular'
+Bundle 'Lokaltog/vim-distinguished'
 
 """"""""""""""""
 """ GUI Font """
