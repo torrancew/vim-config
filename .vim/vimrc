@@ -20,7 +20,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
@@ -65,7 +64,6 @@ set statusline+=%#warningmsg#\
 set statusline+=%{SyntasticStatuslineFlag()}\ 
 set statusline+=%*\ 
 set statusline+=%{fugitive#statusline()}\ 
-set statusline+=%{rvm#statusline()}\ 
 set statusline+=[%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ 
 set statusline+=%h%m%r%y%=%c,%l/%L\ 
 set statusline+=%P\ 
