@@ -6,6 +6,7 @@ filetype off
 """""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 """"""""""""""""""""""
 """ Vundle Bundles """
@@ -34,15 +35,20 @@ Bundle 'c9s/perlomni.vim'
 Bundle 'spf13/vim-colors'
 Bundle 'torrancew/vim-openscad'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'Lokaltog/vim-distinguished'
+Bundle 'vim-scripts/RubySinatra'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
 
 """"""""""""""""
 """ GUI Font """
 """"""""""""""""
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 
 """"""""""""""""""""""""
 """ General Settings """
@@ -227,4 +233,9 @@ nmap <leader>S :SyntasticToggleMode<CR>
 "nmap <leader>rcf :call RunCucumberCurrentFileConque()<CR>
 
 source ~/.vimrc.local
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
