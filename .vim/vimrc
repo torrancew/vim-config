@@ -53,7 +53,12 @@ set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 """"""""""""""""""""""""
 """ General Settings """
 """"""""""""""""""""""""
-colorscheme slate
+if has('gui_running')
+  colorscheme distinguished
+else
+  colorscheme slate
+endif
+
 syntax on
 
 filetype plugin indent on
@@ -205,14 +210,6 @@ nmap <leader>B :NERDTreeToggle<CR>
 " ctags Bindings
 nmap <leader>r :!ctags --exclude='*/tmp/*' --exclude='*/log/*' -R ./*<CR><CR>
 
-" FuzzyFinder Bindings
-"nmap <leader>R :FuzzyFinderTextMateRefreshFiles<CR>
-"nmap <leader>t :FuzzyFinderTextMate<CR>
-"nmap <leader>T :FuzzyFinderTag<CR>
-"nmap <leader>b :FuzzyFinderBuffer<CR>
-"nmap <leader>f :FuzzyFinderFile<CR>
-"nmap <leader>F :FuzzyFinderTaggedFile<CR>
-
 " Syntastic Bindings
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>S :SyntasticToggleMode<CR>
@@ -238,4 +235,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+au BufEnter *.mkd exe 'noremap <F5> :!gh-markdown %<CR><CR>'
 
