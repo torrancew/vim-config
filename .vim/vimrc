@@ -238,6 +238,9 @@ au Syntax * RainbowParenthesesLoadBraces
 
 au BufEnter *.go     exe 'noremap <F5> :!go run %<CR>'
 au BufEnter *.js     exe 'noremap <F5> :!npm run-script %<CR>'
+au BufEnter *.pl     exe 'noremap <F5> :!perl %<CR>'
+au BufEnter *.py     exe 'noremap <F5> :!python %<CR>'
+au BufEnter *.rb     exe 'noremap <F5> :!ruby %<CR>'
 au BufEnter *.mkd    exe 'noremap <F5> :!gh-markdown %<CR><CR>'
 au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
 
