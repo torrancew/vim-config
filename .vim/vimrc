@@ -44,6 +44,7 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
+Bundle 'jnwhiteh/vim-golang'
 
 """"""""""""""""
 """ GUI Font """
