@@ -90,6 +90,23 @@ let perl_fold = 1
 """ Custom Functions """
 """"""""""""""""""""""""
 
+" Set filetype-specific snippet mappings
+command! -nargs=* SetSnippets call SetSnippets()
+function! SetSnippets()
+  if &filetype == "go"
+    let b:snip_func  = "ofunc () {<CR>}<CR><ESC>?func<CR>ela"
+    let b:class_func = "otype  {<CR>}<CR><ESC>?type<CR>ela"
+    let b:use_snippets = 1
+  else
+    let b:use_snippets = 0
+  endif
+
+  if b:use_snippets
+    exe "noremap <buffer> " . "<leader>func " . b:snip_func
+    exe "noremap <buffer> " . "<leader>class " . b:class_func
+  endif
+endfunction
+
 " Use Vim as a hex editor
 " Courtesy of http://vim.wikia.com/wiki/Improved_Hex_editing
 command! -nargs=* Hexmode call ToggleHex()
@@ -247,6 +264,5 @@ au BufEnter *.mkd    exe 'noremap <F5> :!gh-markdown %<CR><CR>'
 au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
 
 " This is terrible and should die, but is a hacky, hacky snippet
-au BufEnter *.go exe 'noremap <leader>class otype  {<CR>}<CR><ESC>?type<CR>ela'
-au BufEnter *.go exe 'noremap <leader>func  ofunc () {<CR>}<CR><ESC>?func<CR>ela'
+au BufEnter * exe 'SetSnippets<CR>'
 
