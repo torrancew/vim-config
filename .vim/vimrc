@@ -45,6 +45,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
 
 """"""""""""""""
 """ GUI Font """
@@ -244,4 +245,8 @@ au BufEnter *.py     exe 'noremap <F5> :!python %<CR>'
 au BufEnter *.rb     exe 'noremap <F5> :!ruby %<CR>'
 au BufEnter *.mkd    exe 'noremap <F5> :!gh-markdown %<CR><CR>'
 au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
+
+" This is terrible and should die, but is a hacky, hacky snippet
+au BufEnter *.go exe 'noremap <leader>class otype  {<CR>}<CR><ESC>?type<CR>ela'
+au BufEnter *.go exe 'noremap <leader>func  ofunc () {<CR>}<CR><ESC>?func<CR>ela'
 
