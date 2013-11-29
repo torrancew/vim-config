@@ -47,6 +47,7 @@ Bundle 'tpope/vim-classpath'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'ervandew/supertab'
+Bundle 'saltstack/salt-vim'
 
 """"""""""""""""
 """ GUI Font """
@@ -256,21 +257,6 @@ nmap <leader>S :SyntasticToggleMode<CR>
 
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
-" ConqueTerm Bindings
-"nmap <leader>Te  :ConqueTermSplit 
-"nmap <leader>Ts  :ConqueTermSplit bash<CR>
-"nmap <leader>Tr  :ConqueTermSplit pry<CR>
-"nmap <leader>Tpl :ConqueTermSplit psh<CR>
-"nmap <leader>Tpy :ConqueTermSplit ipython<CR>
-
-" RubyConque Bindings
-"nmap <leader>rr  :ConqueTermSplit rake<CR>
-"nmap <leader>rs  :ConqueTermSplit rspec --color<CR>
-"nmap <leader>rc  :ConqueTermSplit cucumber --color<CR>
-"nmap <leader>rrf :call RunRubyCurrentFileConque()<CR>
-"nmap <leader>rsf :call RunRspecCurrentFileConque()<CR>
-"nmap <leader>rcf :call RunCucumberCurrentFileConque()<CR>
 
 source ~/.vimrc.local
 
