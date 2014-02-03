@@ -1,3 +1,5 @@
+let g:powerline_no_python_error = 1
+
 set nocompatible
 filetype off
 
@@ -6,48 +8,51 @@ filetype off
 """""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 """"""""""""""""""""""
 """ Vundle Bundles """
 """"""""""""""""""""""
+
+" Utilities
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/L9'
-Bundle 'scrooloose/nerdtree'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-haml'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'DawidJanczak/vim-coffee-script'
-Bundle 'mileszs/ack.vim'
-Bundle 'sickill/vim-pasta'
-Bundle 'rkitover/perl-vim-mxd'
-Bundle 'c9s/perlomni.vim'
-Bundle 'spf13/vim-colors'
-Bundle 'torrancew/vim-openscad'
-Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/powerline'
 Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/L9'
+Bundle 'mileszs/ack.vim'
+Bundle 'spf13/vim-colors'
+Bundle 'bling/vim-airline'
+Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
+Bundle 'sickill/vim-pasta'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-distinguished'
-Bundle 'vim-scripts/RubySinatra'
-Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
+
+" Language Support
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'c9s/perlomni.vim'
+Bundle 'tpope/vim-bundler'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'saltstack/salt-vim'
+Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
-Bundle 'ervandew/supertab'
-Bundle 'saltstack/salt-vim'
+Bundle 'rkitover/perl-vim-mxd'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'torrancew/vim-openscad'
+Bundle 'guns/vim-clojure-static'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-scripts/RubySinatra'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'DawidJanczak/vim-coffee-script'
 
 """"""""""""""""
 """ GUI Font """
@@ -72,16 +77,7 @@ set ts=2 sts=2 sw=2 noai nu et si
 """ Status Line """
 """""""""""""""""""
 set laststatus=2
-let g:Powerline_symbols='fancy'
-" Deprecated by powerline; active if powerline is removed
-set statusline=%t\ 
-set statusline+=%#warningmsg#\ 
-set statusline+=%{SyntasticStatuslineFlag()}\ 
-set statusline+=%*\ 
-set statusline+=%{fugitive#statusline()}\ 
-set statusline+=[%{strlen(&fenc)?&fenc:'none'},%{&ff}]\ 
-set statusline+=%h%m%r%y%=%c,%l/%L\ 
-set statusline+=%P\ 
+let g:airline_powerline_fonts = 1
 
 """"""""""""""""""""""
 """ Syntax Folding """
@@ -218,7 +214,7 @@ endfunction
 let mapleader=','
 
 " Modify and Reload Keybindings
-nmap <leader>k :!gvim -f ~/.vimrc<CR>:source ~/.vimrc<CR>
+nmap <leader>k :!vim -f ~/.vimrc<CR>:source ~/.vimrc<CR>
 
 " Toggle Hex mode
 nmap <leader>h :Hexmode<CR>
@@ -258,8 +254,6 @@ nmap <leader>S :SyntasticToggleMode<CR>
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
-source ~/.vimrc.local
-
 au VimEnter * RainbowParenthesesToggle
 au Syntax   * RainbowParenthesesLoadRound
 au Syntax   * RainbowParenthesesLoadSquare
@@ -275,4 +269,8 @@ au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
 
 " This is terrible and should die, but is a hacky, hacky snippet
 au BufEnter * exe 'SetSnippets<CR>'
+
+if filereadable("~/.vimrc.local")
+  source ~/.vimrc.local
+end
 
