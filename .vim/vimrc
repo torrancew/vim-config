@@ -29,6 +29,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'itchyny/calendar.vim'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'kien/rainbow_parentheses.vim'
 
