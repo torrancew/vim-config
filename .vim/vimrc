@@ -53,6 +53,7 @@ Bundle 'wlangstroth/vim-haskell'
 Bundle 'guns/vim-clojure-static'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-scripts/RubySinatra'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'DawidJanczak/vim-coffee-script'
 
