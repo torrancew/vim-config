@@ -68,11 +68,7 @@ set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 """"""""""""""""""""""""
 """ General Settings """
 """"""""""""""""""""""""
-if has('gui_running')
-  colorscheme distinguished
-else
-  colorscheme slate
-endif
+colorscheme distinguished
 
 syntax on
 
