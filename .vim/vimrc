@@ -30,6 +30,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'kien/rainbow_parentheses.vim'
 
