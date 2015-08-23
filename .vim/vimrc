@@ -58,6 +58,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/RubySinatra'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'vim-scripts/vim-terraform'
 Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'DawidJanczak/vim-coffee-script'
 
