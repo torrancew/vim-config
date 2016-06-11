@@ -257,6 +257,9 @@ nmap <leader>r :!ctags --exclude='*/tmp/*' --exclude='*/log/*' -R ./*<CR><CR>
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>S :SyntasticToggleMode<CR>
 
+" Tabularize Bindings
+vmap t :Tabularize /
+
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
