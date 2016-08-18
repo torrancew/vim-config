@@ -281,5 +281,9 @@ au BufEnter * exe 'SetSnippets<CR>'
 
 if filereadable("~/.vimrc.local")
   source ~/.vimrc.local
-end
+endif
+
+if filereadable(".vimrc.project")
+  source .vimrc.project
+endif
 
