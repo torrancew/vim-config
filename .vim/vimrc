@@ -20,17 +20,19 @@ Plugin 'vim-scripts/L9'
 Plugin 'mileszs/ack.vim'
 Plugin 'spf13/vim-colors'
 Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'kien/rainbow_parentheses.vim'
 
@@ -84,6 +86,7 @@ set ts=2 sts=2 sw=2 noai nu et si
 """""""""""""""""""
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""
 """ Syntax Folding """
@@ -260,9 +263,6 @@ nmap <leader>S :SyntasticToggleMode<CR>
 " Tabularize Bindings
 vmap t :Tabularize /
 
-" SuperTab Settings
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
 au VimEnter * RainbowParenthesesToggle
 au Syntax   * RainbowParenthesesLoadRound
 au Syntax   * RainbowParenthesesLoadSquare
@@ -278,6 +278,8 @@ au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
 
 " This is terrible and should die, but is a hacky, hacky snippet
 au BufEnter * exe 'SetSnippets<CR>'
+
+let g:easytags_events = ['BufWritePost']
 
 if filereadable("~/.vimrc.local")
   source ~/.vimrc.local
