@@ -18,7 +18,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'mileszs/ack.vim'
-Plugin 'spf13/vim-colors'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'sickill/vim-pasta'
@@ -28,13 +27,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'bounceme/highwayman'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Lokaltog/vim-distinguished'
 Plugin 'kien/rainbow_parentheses.vim'
 
 " Language Support
@@ -75,7 +76,8 @@ set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 """"""""""""""""""""""""
 """ General Settings """
 """"""""""""""""""""""""
-colorscheme distinguished
+set background=dark
+colorscheme solarized
 
 syntax on
 
