@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'rhysd/vim-clang-format'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -289,3 +290,7 @@ if filereadable(".vimrc.project")
   source .vimrc.project
 endif
 
+let g:clang_format#auto_format       = 1
+let g:clang_format#detect_style_file = 1
+
+set guioptions = "acegitT"
