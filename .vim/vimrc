@@ -292,6 +292,11 @@ au BufEnter * exe 'SetSnippets<CR>'
 
 let g:easytags_events = ['BufWritePost']
 
+let g:clang_format#auto_format       = 1
+let g:clang_format#detect_style_file = 1
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 if filereadable("~/.vimrc.local")
   source ~/.vimrc.local
 endif
@@ -299,8 +304,5 @@ endif
 if filereadable(".vimrc.project")
   source .vimrc.project
 endif
-
-let g:clang_format#auto_format       = 1
-let g:clang_format#detect_style_file = 1
 
 set guioptions = "acegitT"
