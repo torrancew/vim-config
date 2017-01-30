@@ -1,0 +1,7 @@
+*
+!/.gitignore.d
+!/.gitignore.d/vim
+!/.vimrc
+!/.vim
+!/.vim/*
+/.vimrc.local

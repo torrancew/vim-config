@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'mileszs/ack.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
@@ -28,11 +29,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'honza/vim-snippets'
 Plugin 'bounceme/highwayman'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rhysd/vim-clang-format'
@@ -96,6 +99,8 @@ let g:airline#extensions#tabline#enabled = 1
 """ Syntax Folding """
 """"""""""""""""""""""
 let perl_fold = 1
+set foldmethod=indent
+set foldcolumn=1
 
 """"""""""""""""""""""""
 """ Custom Functions """
@@ -296,13 +301,22 @@ let g:clang_format#auto_format       = 1
 let g:clang_format#detect_style_file = 1
 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_python_binary_path = 'python'
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_use_ultisnips_completer = 1
 
-if filereadable("~/.vimrc.local")
-  source ~/.vimrc.local
+"let g:ycm_key_list_select_completion = ['<C-j>']
+"let g:ycm_key_list_previous_completion = ['<C-k>']
+
+if filereadable($HOME . "/.vimrc.local")
+  source $HOME/.vimrc.local
 endif
 
 if filereadable(".vimrc.project")
   source .vimrc.project
 endif
+
+au FileType python set sw=2 ts=2 sts=2 et
+au FileType python setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 
 set guioptions = "acegitT"
