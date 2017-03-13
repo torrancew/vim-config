@@ -99,7 +99,7 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""
 let perl_fold = 1
 set foldmethod=indent
-set foldcolumn=1
+set foldcolumn=4
 
 """"""""""""""""""""""""
 """ Custom Functions """
