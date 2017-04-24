@@ -15,9 +15,8 @@ call vundle#begin()
 
 " Utilities
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/L9'
-Plugin 'mileszs/ack.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
@@ -31,6 +30,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'honza/vim-snippets'
 Plugin 'bounceme/highwayman'
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/calendar.vim'
@@ -100,6 +100,11 @@ let g:airline#extensions#tabline#enabled = 1
 let perl_fold = 1
 set foldmethod=indent
 set foldcolumn=4
+
+""""""""""""""""""""""""""""""
+""" Miscellaneous Settings """
+""""""""""""""""""""""""""""""
+set wildignore+=*.swp,*.swo,*/.git/*,*/tmp/*,*/log/*
 
 """"""""""""""""""""""""
 """ Custom Functions """
@@ -236,11 +241,19 @@ nmap <leader>k :!vim -f ~/.vimrc<CR>:source ~/.vimrc<CR>
 " Toggle Hex mode
 nmap <leader>h :Hexmode<CR>
 
-" Search with Ack
-nmap <leader>a :Ack<CR>
-nmap <leader>A :Ack 
-vmap <leader>a :Ack<CR>
-vmap <leader>A :Ack 
+" FuzzyFinder
+nmap <C-p> :Files<CR>
+nmap <leader>fb :Buffers<CR>
+nmap <leader>fg :GFiles<CR>
+nmap <leader>ff :Files<CR>
+nmap <leader>fs :Snippets<CR>
+nmap <leader>ft :Tags<CR>
+
+" Search with RipGrep
+nmap <leader>a :Rg<CR>
+nmap <leader>A :Rg
+vmap <leader>a :Rg<CR>
+vmap <leader>A :Rg
 
 " Toggle Non-Printable Characters
 nmap <leader>l :set list!<CR>
@@ -306,6 +319,10 @@ let g:ycm_use_ultisnips_completer = 1
 
 "let g:ycm_key_list_select_completion = ['<C-j>']
 "let g:ycm_key_list_previous_completion = ['<C-k>']
+
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+endif
 
 if filereadable($HOME . "/.vimrc.local")
   source $HOME/.vimrc.local
