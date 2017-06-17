@@ -22,6 +22,7 @@ Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'sickill/vim-pasta'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -56,6 +57,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'saltstack/salt-vim'
 Plugin 'solarnz/thrift.vim'
 Plugin 'groenewege/vim-less'
+Plugin 'tell-k/vim-autopep8'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'Blackrush/vim-gocode'
@@ -72,6 +74,8 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'DawidJanczak/vim-coffee-script'
 
 call vundle#end()
+
+set rtp+=~/.fzf
 
 """"""""""""""""
 """ GUI Font """
@@ -253,7 +257,7 @@ nmap <leader>ft :Tags<CR>
 
 " Search with RipGrep
 nmap <leader>a :Rg<CR>
-nmap <leader>A :Rg
+nmap <leader>A :Rg 
 vmap <leader>a :Rg<CR>
 vmap <leader>A :Rg
 
@@ -283,6 +287,8 @@ nmap <leader>r :!ctags --exclude='*/tmp/*' --exclude='*/log/*' -R ./*<CR><CR>
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>S :SyntasticToggleMode<CR>
 
+set guioptions = "acegitT"
+
 " Tabularize Bindings
 vmap t :Tabularize /
 
@@ -298,13 +304,15 @@ au Syntax   * RainbowParenthesesLoadRound
 au Syntax   * RainbowParenthesesLoadSquare
 au Syntax   * RainbowParenthesesLoadBraces
 
+au BufWritePre *.py Autopep8
+
+au FileType python setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+
 au BufEnter *.go     exe 'noremap <F5> :!go run %<CR>'
-au BufEnter *.js     exe 'noremap <F5> :!npm run-script %<CR>'
 au BufEnter *.pl     exe 'noremap <F5> :!perl %<CR>'
 au BufEnter *.py     exe 'noremap <F5> :!python %<CR>'
 au BufEnter *.rb     exe 'noremap <F5> :!ruby %<CR>'
 au BufEnter *.mkd    exe 'noremap <F5> :Pandoc! html5<CR>'
-au BufEnter *.coffee exe 'noremap <F5> :!coffee %<CR><CR>'
 
 " This is terrible and should die, but is a hacky, hacky snippet
 au BufEnter * exe 'SetSnippets<CR>'
@@ -314,13 +322,17 @@ let g:easytags_events = ['BufWritePost']
 let g:clang_format#auto_format       = 1
 let g:clang_format#detect_style_file = 1
 
-let g:ycm_autoclose_preview_window_after_completion = 1
+" YouCompleteMe Configuration
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_use_ultisnips_completer = 1
-
 "let g:ycm_key_list_select_completion = ['<C-j>']
 "let g:ycm_key_list_previous_completion = ['<C-k>']
+
+" Autopep8 Configuration
+let g:autopep8_aggressive = 1
+let g:autopep8_disable_show_diff = 1
 
 if executable('rg')
   set grepprg=rg\ --vimgrep
@@ -334,7 +346,3 @@ if filereadable(".vimrc.project")
   source .vimrc.project
 endif
 
-au FileType python set sw=2 ts=2 sts=2 et
-au FileType python setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-
-set guioptions = "acegitT"

@@ -1,0 +1,1 @@
+md2html|html5 --self-contained -s -H ~/.mutt/template.css
