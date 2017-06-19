@@ -100,13 +100,6 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-""""""""""""""""""""""
-""" Syntax Folding """
-""""""""""""""""""""""
-let perl_fold = 1
-set foldmethod=indent
-set foldcolumn=4
-
 """"""""""""""""""""""""""""""
 """ Miscellaneous Settings """
 """"""""""""""""""""""""""""""
@@ -115,43 +108,6 @@ set wildignore+=*.swp,*.swo,*/.git/*,*/tmp/*,*/log/*
 """"""""""""""""""""""""
 """ Custom Functions """
 """"""""""""""""""""""""
-
-" Set filetype-specific snippet mappings
-command! -nargs=* SetSnippets call SetSnippets()
-function! SetSnippets()
-  if &filetype == "go"
-    let b:snip_func    = "ofunc () {<CR>}<CR><ESC>?func<CR>ela"
-    let b:snip_class   = "otype  {<CR>}<CR><ESC>?type<CR>ela"
-    let b:use_snippets = 1
-  elseif &filetype == "ruby"
-    let b:snip_func    = "odef ()<CR><ESC>dd?def<CR>ela"
-    let b:snip_class   = "oclass <CR><ESC>dd?class<CR>ela"
-    let b:use_snippets = 1
-  else
-    let b:use_snippets = 0
-    if exists("b:snip_mod")
-      unlet b:snip_mod
-    endif
-    if exists("b:snip_func")
-      unlet b:snip_func
-    endif
-    if exists("b:snip_class")
-      unlet b:snip_class
-    endif
-  endif
-
-  if b:use_snippets
-    if exists("b:snip_mod")
-      exe "noremap <buffer> " . "<leader>mod " . b:snip_mod
-    endif
-    if exists("b:snip_func")
-      exe "noremap <buffer> " . "<leader>func " . b:snip_func
-    endif
-    if exists("b:snip_class")
-      exe "noremap <buffer> " . "<leader>class " . b:snip_class
-    endif
-  endif
-endfunction
 
 " Use Vim as a hex editor
 " Courtesy of http://vim.wikia.com/wiki/Improved_Hex_editing
@@ -314,9 +270,6 @@ au BufEnter *.py     exe 'noremap <F5> :!python %<CR>'
 au BufEnter *.rb     exe 'noremap <F5> :!ruby %<CR>'
 au BufEnter *.mkd    exe 'noremap <F5> :Pandoc! html5<CR>'
 
-" This is terrible and should die, but is a hacky, hacky snippet
-au BufEnter * exe 'SetSnippets<CR>'
-
 let g:easytags_events = ['BufWritePost']
 
 let g:clang_format#auto_format       = 1
@@ -327,8 +280,11 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_use_ultisnips_completer = 1
-"let g:ycm_key_list_select_completion = ['<C-j>']
-"let g:ycm_key_list_previous_completion = ['<C-k>']
+let g:ycm_key_list_select_completion   = ['<C-n>', '<C-j>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<C-k>']
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " Autopep8 Configuration
 let g:autopep8_aggressive = 1
