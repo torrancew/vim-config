@@ -12,12 +12,19 @@ call vundle#begin()
 """"""""""""""""""""""
 """ Vundle Bundles """
 """"""""""""""""""""""
-
-" Utilities
+" Vundle
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/L9'
+
+" Fuzzy Finder
 Plugin 'junegunn/fzf.vim'
+Plugin 'jremmen/vim-ripgrep'
+
+" Completion
 Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
+
+" Misc Utilities
+Plugin 'vim-scripts/L9'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
@@ -30,7 +37,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'honza/vim-snippets'
-Plugin 'jremmen/vim-ripgrep'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -40,7 +46,6 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/rainbow_parentheses.vim'
 
 " Language Support
@@ -52,6 +57,7 @@ Plugin 'saltstack/salt-vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'Blackrush/vim-gocode'
+Plugin 'venantius/vim-cljfmt'
 Plugin 'guns/vim-clojure-static'
 Plugin 'vim-scripts/vim-terraform'
 Plugin 'puppetlabs/puppet-syntax-vim'
