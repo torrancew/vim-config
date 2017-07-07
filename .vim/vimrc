@@ -36,6 +36,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'fmoralesc/vim-pad'
 Plugin 'honza/vim-snippets'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'scrooloose/nerdtree'
@@ -277,6 +278,10 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " Autopep8 Configuration
 let g:autopep8_aggressive = 1
 let g:autopep8_disable_show_diff = 1
+
+" vim-pad Configuration
+let g:pad#dir = '~/share/annex/notes'
+let g:pad#default_format = 'pandoc'
 
 if executable('rg')
   set grepprg=rg\ --vimgrep
