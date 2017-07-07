@@ -48,6 +48,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vhdirk/vim-cmake'
 
 " Language Support
 Plugin 'fatih/vim-go'
@@ -191,6 +192,14 @@ let mapleader=','
 " Modify and Reload Keybindings
 nmap <leader>k :!vim -f ~/.vimrc<CR>:source ~/.vimrc<CR>
 
+" Toggle Location List
+nmap <leader>ll :lopen<CR>
+nmap <leader>lc :lclose<CR>
+
+" Toggle QuickFix
+nmap <leader>qf :copen<CR>
+nmap <leader>qc :cclose<CR>
+
 " Toggle Hex mode
 nmap <leader>h :Hexmode<CR>
 
@@ -267,6 +276,7 @@ let g:clang_format#auto_format       = 1
 let g:clang_format#detect_style_file = 1
 
 " YouCompleteMe Configuration
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_collect_identifiers_from_tags_files = 1
