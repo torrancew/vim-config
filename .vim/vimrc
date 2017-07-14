@@ -292,6 +292,7 @@ let g:autopep8_disable_show_diff = 1
 " vim-pad Configuration
 let g:pad#dir = '~/share/annex/notes'
 let g:pad#default_format = 'pandoc'
+let g:pad#window_height = 24
 
 if executable('rg')
   set grepprg=rg\ --vimgrep
