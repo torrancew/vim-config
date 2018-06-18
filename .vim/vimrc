@@ -25,6 +25,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Misc Utilities
 Plugin 'vim-scripts/L9'
+Plugin 'vhdirk/vim-cmake'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
@@ -47,10 +48,9 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'vhdirk/vim-cmake'
+Plugin 'altercation/vim-colors-solarized'
 
 " Language Support
 Plugin 'fatih/vim-go'
