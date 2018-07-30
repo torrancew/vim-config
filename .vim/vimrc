@@ -284,10 +284,11 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_use_ultisnips_completer = 1
-let g:UltiSnipsExpandTrigger       = '<C-j>'
-let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+" UltiSnips Configuration
+let g:UltiSnipsExpandTrigger       = '<c-j>'
+let g:UltiSnipsJumpForwardTrigger  = '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
 " Autopep8 Configuration
 let g:autopep8_aggressive = 1
