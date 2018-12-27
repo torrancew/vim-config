@@ -268,8 +268,6 @@ au Syntax   * RainbowParenthesesLoadRound
 au Syntax   * RainbowParenthesesLoadSquare
 au Syntax   * RainbowParenthesesLoadBraces
 
-au BufWritePre *.py Autopep8
-
 au FileType python setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 
 au BufEnter *.go     exe 'noremap <F5> :!go run %<CR>'
@@ -295,8 +293,10 @@ let g:UltiSnipsJumpForwardTrigger  = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
 " Autopep8 Configuration
+let g:autopep8_on_save = 1
 let g:autopep8_aggressive = 1
 let g:autopep8_disable_show_diff = 1
+let g:autopep8_max_line_length = 140
 
 " vim-pad Configuration
 let g:pad#dir = '~/share/annex/notes'
