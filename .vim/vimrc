@@ -26,6 +26,7 @@ Plugin 'Valloric/YouCompleteMe'
 " Misc Utilities
 Plugin 'vim-scripts/L9'
 Plugin 'vhdirk/vim-cmake'
+Plugin 'mattn/webapi-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
@@ -303,6 +304,9 @@ let g:autopep8_max_line_length = 140
 let g:pad#dir = '~/share/annex/notes'
 let g:pad#default_format = 'pandoc'
 let g:pad#window_height = 24
+
+let g:rustfmt_autosave = 1
+let g:rust_clip_command = 'xclip -selection clipboard'
 
 if executable('rg')
   set grepprg=rg\ --vimgrep
