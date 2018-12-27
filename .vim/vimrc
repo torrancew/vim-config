@@ -26,6 +26,7 @@ Plugin 'Valloric/YouCompleteMe'
 " Misc Utilities
 Plugin 'vim-scripts/L9'
 Plugin 'vhdirk/vim-cmake'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
