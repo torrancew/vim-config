@@ -40,6 +40,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'fisadev/vim-isort'
 Plugin 'fmoralesc/vim-pad'
 Plugin 'honza/vim-snippets'
 Plugin 'tell-k/vim-autopep8'
@@ -82,7 +83,7 @@ set rtp+=~/.fzf
 """"""""""""""""
 """ GUI Font """
 """"""""""""""""
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
+set guifont=UbuntuMono\ Nerd\ Font\ 12
 
 """"""""""""""""""""""""
 """ General Settings """
